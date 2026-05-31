@@ -72,7 +72,7 @@ function init() {
 }
 
 // Initialize the plugin.
-add_action( 'plugins_loaded', __NAMESPACE__ . '\\init' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\\init', -999 );
 
 // Use WordPress add_filter function from global namespace.
 \add_filter( 'wp_image_editors', __NAMESPACE__ . '\\image_editors_add_vips_ffi' );
